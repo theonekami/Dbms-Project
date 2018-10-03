@@ -64,6 +64,7 @@ def Patient(event=None):
     pointer= hos.cursor()
     pointer.execute("SELECT * FROM PATIENT")
     p= pointer.fetchall()
+    for i in range(0, 
     display.insert(END,"PATIENT")
     for i in p:
         display.insert(END, i)
