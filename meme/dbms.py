@@ -58,6 +58,10 @@ def insert(event):
     print(cmd)
     pointer.execute(cmd)
     hos.commit()
+    for i in func:
+        if i.__name__.lower()==t.lower():
+            i()
+            break
 ##    "({}{}{}) WHERE " + str(z[0][0]) + "=" +str(y[0])
 
 display.bind("<Delete>",remove_entry)
